@@ -1,0 +1,476 @@
+/**
+ * @author      ZEUS Design - http://www.zeusdesign.com.tw
+ * @copyright   Copyright (c) 2016 ZEUS Design
+ */
+
+@import "_oa";
+
+@include font-face("Monaco", font-files("monaco/monaco.ttf", "monaco/monaco.otf"));
+@include font-face("icomoon", font-files("icomoon/icomoon.eot", "icomoon/icomoon.woff", "icomoon/icomoon.ttf", "icomoon/icomoon.svg"));
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon', Monaco, "微軟正黑體", "Microsoft JhengHei";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  @include font-smoothing(antialiased);
+}
+
+.icon-icon_menu:before {
+  content: "\e90d";
+}
+.icon-f_iocn_01:before {
+  content: "\e900";
+}
+.icon-f_iocn_02:before {
+  content: "\e901";
+}
+.icon-f_iocn_03:before {
+  content: "\e902";
+}
+.icon-icon_n01:before {
+  content: "\e903";
+}
+.icon-icon_n02:before {
+  content: "\e904";
+}
+.icon-icon_n03:before {
+  content: "\e905";
+}
+.icon-icon_n04:before {
+  content: "\e906";
+}
+.icon-icon_n05:before {
+  content: "\e907";
+}
+.icon-icon_n06:before {
+  content: "\e908";
+}
+.icon-icon_n07:before {
+  content: "\e909";
+}
+.icon-icon_n08:before {
+  content: "\e90a";
+}
+.icon-icon_n09:before {
+  content: "\e90b";
+}
+.icon-icon_user:before {
+  content: "\e90c";
+}
+
+
+* {
+  &, &:after, &:before {
+    vertical-align: top;
+    @include box-sizing(border-box);
+    @include selection(rgba(150, 200, 255, 1), rgba(255, 255, 255, 1));
+    @include font-smoothing(antialiased);
+  }
+}
+
+html {
+  height: 100%;
+  font-size: 75%; /* 16px*75%=12px */
+
+
+  body {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;  /* 1*12px=12px */
+    font-family: "黑體", 'Microsoft YaHei', "微软雅黑体", "微軟雅黑體", 'Microsoft JhengHei', "微軟正黑體", Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 1.00);
+    color: rgba(50, 50, 50, 0.8);
+
+    @include font-smoothing(antialiased);
+
+  }
+}
+
+
+$c_blue: rgba(0, 154, 223, 1.00);
+$c_footer: rgba(255, 234, 238, 1.00);
+
+
+#f_menu {}
+
+#top_boxs {
+  display: inline-block;
+  width: 100%;
+  padding: 5% 5%;
+  border: 1px solid rgba(255, 0, 0, .3);
+}
+
+#nav_boxs {
+  display: inline-block;
+  width: 100%;
+  padding: 5% 0;
+  background-color: $c_blue;
+  @include clearfix();
+
+  .logo_boxs {
+    display: inline-block;
+    text-decoration: none;
+    float: left;
+    width: 75%;
+    @include clearfix();
+
+    img {
+      max-width: 100%;
+      height: auto;
+      float: left;
+    }
+  }
+
+  .menu_boxs {
+    display: inline-block;
+    width: 15%;
+
+    &:before {
+      display: inline-block;
+      width: 100%;
+      font-family: 'icomoon';
+      content: '\e90d';
+      color: white;
+      font-size: 2rem;
+      margin: 27% 0;
+      text-align: right;
+
+      // ipad plus 以上
+      @include range-width(900px, 3000px) {
+        font-size: 4rem;
+        margin: 18% 0;
+      }
+
+      // ipad 
+      @include range-width(765px, 900px) {
+        font-size: 4rem;
+        margin: 24% 0;
+      }
+
+      // android中間值
+      @include range-width(415px, 765px) {
+        margin: 33% 0;
+      }
+
+      // iphone6 plus 以上
+      @include range-width(380px, 415px) {
+        margin: 35% 0;
+      }
+
+      // iphone6 以上
+      @include range-width(330px, 380px) {
+        margin: 30% 0;
+      }
+    }
+  }
+}
+
+#banner_boxs {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 45%;
+}
+
+#cent_boxs {
+  display: inline-block;
+  width: 100%;
+  padding: 5% 5%;
+  background-color: white;
+  @include clearfix();
+
+  .nine_boxs {
+    display: inline-block;
+    cursor: pointer;
+    float: left;
+    width: calc(100% / 3 - 3% * 2 / 3);
+    padding-bottom: 32%;
+    height: 0;
+    text-decoration: none;
+    @include border-radius(4px);
+
+    &:nth-child(3n + 2) {
+      margin: 0 3%;
+    }
+
+    &:nth-child(3n + 3) {
+      float: right;
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: 3%;
+    }
+
+    .nine_box {
+      display: inline-block;
+      width: 100%;
+      height: 0;
+      padding: 10% 5%;
+      padding-bottom: 90%;
+      color: white;
+
+      &:before {
+        display: inline-block;
+        font-family: 'icomoon';
+        width: 70%;
+        padding-bottom: 70%;
+        height: 0;
+        font-size: 4.7rem;
+
+        // ipad plus 以上
+        @include range-width(1050px, 3000px) {
+          font-size: 20rem;
+        }
+
+        // ipad 
+        @include range-width(780px, 1050px) {
+          font-size: 16rem;
+        }
+
+        // android中間值
+        @include range-width(415px, 780px) {
+          font-size: 12rem;
+        }
+
+        // iphone6 plus 以上
+        @include range-width(380px, 415px) {
+          font-size: 6.5rem;
+        }
+
+        // iphone6 以上
+        @include range-width(330px, 380px) {
+          font-size: 5.8rem;
+        }
+      }
+
+      &:after {
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+
+        @include range-width(1050px, 3000px) {
+          font-size: 4rem;
+        }
+
+        @include range-width(780px, 1050px) {
+          font-size: 3.5rem;
+        }
+
+        @include range-width(415px, 780px) {
+          font-size: 2.5em;
+        }
+
+        @include range-width(380px, 415px) {
+          font-size: 1.3rem;
+        }
+
+        @include range-width(330px, 380px) {
+          font-size: 1.18rem;
+        }
+      }
+    }
+
+    // color
+    &.n_01 {
+      background-color: rgba(247, 155, 103, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e903';
+        }
+
+        &:after {
+          content: '會員登入';
+        }
+      }
+    }
+
+    &.n_02 {
+      background-color: rgba(119, 207, 190, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e904';
+        }
+
+        &:after {
+          content: '理財課程';
+        }
+      }
+    }
+
+    &.n_03 {
+      background-color: rgba(241, 153, 147, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e905';
+        }
+
+        &:after {
+          content: '最新消息';
+        }
+      }
+    }
+
+    &.n_04 {
+      background-color: rgba(250, 180, 139, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e906';
+        }
+
+        &:after {
+          content: '活動行事曆';
+        }
+      }      
+    }
+
+    &.n_05 {
+      background-color: rgba(118, 148, 215, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e907';
+        }
+
+        &:after {
+          content: '分享專區';
+        }
+      }
+    }
+
+    &.n_06 {
+      background-color: rgba(172, 125, 180, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e908';
+        }
+
+        &:after {
+          content: '理財專有名詞';
+        }
+      }
+    }
+
+    &.n_07 {
+      background-color: rgba(245, 164, 181, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e909';
+        }
+
+        &:after {
+          content: '教學影片總覽';
+        }
+      }
+    }
+
+    &.n_08 {
+      background-color: rgba(243, 198, 64, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e90a';
+        }
+
+        &:after {
+          content: '我有話要說';
+        }
+      }
+    }
+
+    &.n_09 {
+      background-color: rgba(97, 199, 241, 1.00);
+
+      .nine_box {
+        &:before {
+          content: '\e90b';
+        }
+
+        &:after {
+          content: '網站地圖';
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: inline-block;
+  width: 100%;
+  padding: 5% 5%;
+  background-color: $c_footer;
+
+  .f_top_boxs {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 3%;
+    @include clearfix();
+    
+    .f_logo_left {
+      display: inline-block;
+      width: calc(75% - 5px);
+      float: left;
+      @include clearfix();
+
+      img {        
+        max-width: 100%;
+        height: auto;
+        float: left;
+      }
+    }
+
+    .f_logo_right {
+      display: inline-block;
+      width: calc(25% - 5px);
+      float: left;
+      margin-left: 10px;
+      @include clearfix();
+
+      img {        
+        max-width: 100%;
+        height: auto;
+        float: right;
+      }
+    }
+  }
+
+  .f_down_boxs {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+
+    p {
+      display: inline-block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 1%;
+      font-size: 1rem;
+      color: black;
+
+      
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
