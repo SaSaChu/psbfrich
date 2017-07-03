@@ -26,69 +26,90 @@
 
 .icon-icon_fb:before {
   content: "\e91a";
+  color: #fefefe;
 }
 .icon-icon_01:before {
   content: "\e90d";
+  color: #00a4e3;
 }
 .icon-icon_c01:before {
   content: "\e914";
+  color: #ce9d3e;
 }
 .icon-icon_c02:before {
   content: "\e915";
+  color: #f19571;
 }
 .icon-icon_c03:before {
   content: "\e916";
+  color: #77d265;
 }
 .icon-icon_c04:before {
   content: "\e917";
+  color: #3aa1da;
 }
 .icon-icon_c05:before {
   content: "\e918";
+  color: #af74db;
 }
 .icon-icon_cam:before {
   content: "\e919";
 }
 .icon-icon_home:before {
   content: "\e91b";
+  color: #fff;
 }
 .icon-icon_q:before {
   content: "\e91c";
+  color: #b4b4b4;
 }
 .icon-icon_smile:before {
   content: "\e91d";
+  color: #00a4e3;
 }
 .icon-icon_start:before {
   content: "\e91e";
+  color: #c9caca;
 }
 .icon-icon_update:before {
   content: "\e91f";
+  color: #a8a8a8;
 }
 .icon-icon_voice:before {
   content: "\e920";
+  color: #aeaeae;
 }
 .icon-icon.search:before {
   content: "\e921";
+  color: #fff;
 }
 .icon-f_iocn_01:before {
   content: "\e900";
+  color: #c9caca;
 }
 .icon-f_iocn_02:before {
   content: "\e901";
+  color: #c9caca;
 }
 .icon-f_iocn_03:before {
   content: "\e902";
+  color: #c9caca;
 }
 .icon-icon_n01:before {
   content: "\e903";
+  color: #c9caca;
 }
 .icon-icon_n02:before {
   content: "\e904";
+  color: #c9caca;
 }
 .icon-icon_n03:before {
   content: "\e905";
+  color: #c9caca;
 }
 .icon-icon_n04:before {
   content: "\e906";
+  color: #c9caca;
 }
 .icon-icon_n05:before {
   content: "\e907";
@@ -96,18 +117,23 @@
 }
 .icon-icon_n06:before {
   content: "\e908";
+  color: #c9caca;
 }
 .icon-icon_n07:before {
   content: "\e909";
+  color: #c9caca;
 }
 .icon-icon_n08:before {
   content: "\e90a";
+  color: #c9caca;
 }
 .icon-icon_n09:before {
   content: "\e90b";
+  color: #c9caca;
 }
 .icon-icon_user:before {
   content: "\e90c";
+  color: #c9caca;
 }
 .icon-check:before {
   content: "\e922";

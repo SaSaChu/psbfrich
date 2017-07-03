@@ -19,48 +19,159 @@
   @include font-smoothing(antialiased);
 }
 
-.icon-icon_menu:before {
+.icon-icon_fb:before {
+  content: "\e91a";
+  font-size: 1rem;
+}
+.icon-icon_01:before {
   content: "\e90d";
+  font-size: 1rem;
+}
+.icon-icon_c01:before {
+  content: "\e914";
+  font-size: 1rem;
+}
+.icon-icon_c02:before {
+  content: "\e915";
+  font-size: 1rem;
+}
+.icon-icon_c03:before {
+  content: "\e916";
+  font-size: 1rem;
+}
+.icon-icon_c04:before {
+  content: "\e917";
+  font-size: 1rem;
+}
+.icon-icon_c05:before {
+  content: "\e918";
+  font-size: 1rem;
+}
+.icon-icon_cam:before {
+  content: "\e919";
+  font-size: 1rem;
+}
+.icon-icon_home:before {
+  content: "\e91b";
+  font-size: 1rem;
+}
+.icon-icon_q:before {
+  content: "\e91c";
+  font-size: 1rem;
+}
+.icon-icon_smile:before {
+  content: "\e91d";
+  font-size: 1rem;
+}
+.icon-icon_start:before {
+  content: "\e91e";
+  font-size: 1rem;
+}
+.icon-icon_update:before {
+  content: "\e91f";
+  font-size: 1rem;
+}
+.icon-icon_voice:before {
+  content: "\e920";
+  font-size: 1rem;
+}
+.icon-icon.search:before {
+  content: "\e921";
+  font-size: 1rem;
 }
 .icon-f_iocn_01:before {
   content: "\e900";
+  font-size: 1rem;
 }
 .icon-f_iocn_02:before {
   content: "\e901";
+  font-size: 1rem;
 }
 .icon-f_iocn_03:before {
   content: "\e902";
+  font-size: 1rem;
 }
 .icon-icon_n01:before {
   content: "\e903";
+  font-size: 1rem;
 }
 .icon-icon_n02:before {
   content: "\e904";
+  font-size: 1rem;
 }
 .icon-icon_n03:before {
   content: "\e905";
+  font-size: 1rem;
 }
 .icon-icon_n04:before {
   content: "\e906";
+  font-size: 1rem;
 }
 .icon-icon_n05:before {
   content: "\e907";
+  font-size: 1rem;
 }
 .icon-icon_n06:before {
   content: "\e908";
+  font-size: 1rem;
 }
 .icon-icon_n07:before {
   content: "\e909";
+  font-size: 1rem;
 }
 .icon-icon_n08:before {
   content: "\e90a";
+  font-size: 1rem;
 }
 .icon-icon_n09:before {
   content: "\e90b";
+  font-size: 1rem;
 }
 .icon-icon_user:before {
   content: "\e90c";
+  font-size: 1rem;
 }
+.icon-check:before {
+  content: "\e922";
+  font-size: 1rem;
+}
+.icon-chevron-down:before {
+  content: "\e90e";
+  font-size: 1rem;
+}
+.icon-chevron-left:before {
+  content: "\e90f";
+  font-size: 1rem;
+}
+.icon-chevron-right:before {
+  content: "\e910";
+  font-size: 1rem;
+}
+.icon-chevron-up:before {
+  content: "\e911";
+  font-size: 1rem;
+}
+.icon-circle:before {
+  content: "\e923";
+  font-size: 1rem;
+}
+.icon-menu:before {
+  content: "\e912";
+  font-size: 1rem;
+}
+.icon-minus:before {
+  content: "\e924";
+  font-size: 1rem;
+}
+.icon-plus:before {
+  content: "\e925";
+  font-size: 1rem;
+}
+.icon-x:before {
+  content: "\e913";
+  font-size: 1rem;
+}
+
 
 
 * {
@@ -90,594 +201,334 @@ html {
     color: rgba(50, 50, 50, 0.8);
 
     @include font-smoothing(antialiased);
-
   }
 }
 
 
-$c_blue: rgba(0, 154, 223, 1.00);
-$c_footer: rgba(255, 234, 238, 1.00);
+$m_width: 320px;
+$c_blue: rgba(0, 154, 225, 1.00);
 
 
-#f_menu {}
-
-#top {
+header {
   display: inline-block;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
 
-  #top_boxs {
+  height: 140px;
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+
+
+#milddle {
+  display: inline-block;
+  width: 100%;
+
+  .banner_boxs {
     display: inline-block;
     width: 100%;
-    padding: 5% 5%;
-    border: 1px solid rgba(255, 0, 0, .3);
-    background-color: white;
+    max-width: 100%;
+    height: auto;
+
+    img {
+      display: inline-block !important;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
   }
 
-  #nav_boxs {
+  .milddle_boxs {
     display: inline-block;
+    max-width: $m_width;
     width: 100%;
-    padding: 5% 0;
-    background-color: $c_blue;
+    padding: 15px 25px;
+    margin-bottom: 70px;
     @include clearfix();
 
-    .logo_boxs {
+    .cent_boxs {
       display: inline-block;
-      text-decoration: none;
+      width: calc(90px - 5px * 2 / 3);
+      height: 90px;
       float: left;
-      width: 75%;
-      @include clearfix();
+      padding: 10px 5px;
+      @include border-radius(4px);
 
-      img {
-        max-width: 100%;
-        height: auto;
-        float: left;
+      &:nth-child(3n + 2) {
+        margin-left: 5px;
+        margin-right: 5px;
       }
-    }
 
-    .menu_boxs {
-      display: inline-block;
-      width: 15%;
+      &:nth-child(n + 4) {
+        margin-top: 5px;
+      }
 
-      &:before {
+      .cent_box, .cent_type {
         display: inline-block;
         width: 100%;
-        font-family: 'icomoon';
-        content: '\e90d';
+      }
+
+      .cent_type {
         color: white;
-        font-size: 2rem;
-        margin: 27% 0;
-        text-align: right;
+        font-size: .9rem;
+        font-weight: 600;
+        margin-top: 5px;
+      }
 
-        // ipad plus 以上
-        @include range-width(900px, 3000px) {
-          font-size: 4rem;
-          margin: 18% 0;
-        }
+      .cent_box {
+        height: 45px;
+      }
 
-        // ipad 
-        @include range-width(765px, 900px) {
-          font-size: 4rem;
-          margin: 24% 0;
-        }
+      &:nth-child(1) {
+        background-color: rgba(120, 207, 191, 1.00);
 
-        // android中間值
-        @include range-width(415px, 765px) {
-          margin: 33% 0;
-        }
-
-        // iphone6 plus 以上
-        @include range-width(380px, 415px) {
-          margin: 35% 0;
-        }
-
-        // iphone6 以上
-        @include range-width(330px, 380px) {
-          margin: 30% 0;
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e904';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
         }
       }
+
+      &:nth-child(2) {
+        background-color: rgba(248, 182, 139, 1.00);
+
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e906';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        background-color: rgba(172, 127, 183, 1.00);
+
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e908';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
+        }
+      } 
+
+      &:nth-child(4) {
+        background-color: rgba(242, 164, 184, 1.00);
+
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e909';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        background-color: rgba(245, 157, 104, 1.00);
+
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e903';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        background-color: rgba(240, 153, 148, 1.00);
+
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e905';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
+        }
+      }
+
+      &:nth-child(7) {
+        background-color: rgba(118, 149, 216, 1.00);
+
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e907';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
+        }
+      }
+
+      &:nth-child(8) {
+        background-color: rgba(243, 199, 64, 1.00);
+
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e90a';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
+        }
+      }
+
+      &:nth-child(9) {
+        background-color: rgba(97, 199, 242, 1.00);
+
+        .cent_box {
+          &:before {
+            display: inline-block;
+            width: 100%;
+            content: '\e90b';
+            font-family: 'icomoon';
+            font-size: 5rem;
+            color: white;
+          }
+        }
+      }                      
     }
   }
 }
 
 
 
-#nav_box {
+nav {
   display: inline-block;
-  position: absolute;
-  bottom: -20.5%;
-  right: -60%;
-  width: 60%;
-  height: 100%;
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+  left: 0;
   background-color: $c_blue;
 
-  z-index: 3;
-  @include transition(all .3s);
-
-  &.sn {
-    right: 0;
-  }
-}
-
-#cover {
-  display: inline-block;
-  position: absolute;
-  bottom: -20.5%;
-  left:  -100%;
-  background-color: rgba(39, 40, 34, .5);
-  width: 100%;
-  height: 100%;
-
-  z-index: 2;
-  @include transition(all .3s);
-
-  &.show {
-    left: 0;
-  }
-}
-
-
-#banner_boxs {
-  display: inline-block;
-  width: 100%;
-  height: 0;
-  padding-bottom: 45%;
-}
-
-#cent_boxs {
-  display: inline-block;
-  width: 100%;
-  padding: 5% 5%;
-  background-color: white;
-  @include clearfix();
-
-  .nine_boxs {
-    display: inline-block;
-    cursor: pointer;
-    float: left;
-    width: calc(100% / 3 - 3% * 2 / 3);
-    padding-bottom: 32%;
-    height: 0;
-    text-decoration: none;
-    @include border-radius(4px);
-
-    &:nth-child(3n + 2) {
-      margin: 0 3%;
-    }
-
-    &:nth-child(3n + 3) {
-      float: right;
-    }
-
-    &:nth-child(n + 4) {
-      margin-top: 3%;
-    }
-
-    .nine_box {
-      display: inline-block;
-      width: 100%;
-      height: 0;
-      padding: 10% 5%;
-      padding-bottom: 90%;
-      color: white;
-
-      &:before {
-        display: inline-block;
-        font-family: 'icomoon';
-        width: 70%;
-        padding-bottom: 70%;
-        height: 0;
-        font-size: 4.7rem;
-
-        // ipad plus 以上
-        @include range-width(1050px, 3000px) {
-          font-size: 20rem;
-        }
-
-        // ipad 
-        @include range-width(780px, 1050px) {
-          font-size: 16rem;
-        }
-
-        // android中間值
-        @include range-width(415px, 780px) {
-          font-size: 12rem;
-        }
-
-        // iphone6 plus 以上
-        @include range-width(380px, 415px) {
-          font-size: 6.5rem;
-        }
-
-        // iphone6 以上
-        @include range-width(330px, 380px) {
-          font-size: 5.8rem;
-        }
-      }
-
-      &:after {
-        display: block;
-        font-size: 1rem;
-        font-weight: 600;
-
-        @include range-width(1050px, 3000px) {
-          font-size: 4rem;
-        }
-
-        @include range-width(780px, 1050px) {
-          font-size: 3.5rem;
-        }
-
-        @include range-width(415px, 780px) {
-          font-size: 2.5em;
-        }
-
-        @include range-width(380px, 415px) {
-          font-size: 1.3rem;
-        }
-
-        @include range-width(330px, 380px) {
-          font-size: 1.18rem;
-        }
-      }
-    }
-
-    // color
-    &.n_01 {
-      background-color: rgba(247, 155, 103, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e903';
-        }
-
-        &:after {
-          content: '會員登入';
-        }
-      }
-    }
-
-    &.n_02 {
-      background-color: rgba(119, 207, 190, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e904';
-        }
-
-        &:after {
-          content: '理財課程';
-        }
-      }
-    }
-
-    &.n_03 {
-      background-color: rgba(241, 153, 147, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e905';
-        }
-
-        &:after {
-          content: '最新消息';
-        }
-      }
-    }
-
-    &.n_04 {
-      background-color: rgba(250, 180, 139, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e906';
-        }
-
-        &:after {
-          content: '活動行事曆';
-        }
-      }      
-    }
-
-    &.n_05 {
-      background-color: rgba(118, 148, 215, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e907';
-        }
-
-        &:after {
-          content: '分享專區';
-        }
-      }
-    }
-
-    &.n_06 {
-      background-color: rgba(172, 125, 180, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e908';
-        }
-
-        &:after {
-          content: '理財專有名詞';
-        }
-      }
-    }
-
-    &.n_07 {
-      background-color: rgba(245, 164, 181, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e909';
-        }
-
-        &:after {
-          content: '教學影片總覽';
-        }
-      }
-    }
-
-    &.n_08 {
-      background-color: rgba(243, 198, 64, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e90a';
-        }
-
-        &:after {
-          content: '我有話要說';
-        }
-      }
-    }
-
-    &.n_09 {
-      background-color: rgba(97, 199, 241, 1.00);
-
-      .nine_box {
-        &:before {
-          content: '\e90b';
-        }
-
-        &:after {
-          content: '網站地圖';
-        }
-      }
-    }
-  }
-}
-
-footer {
-  display: inline-block;
-  width: 100%;
-  padding: 5% 5%;
-  background-color: $c_footer;
-
-  .f_top_boxs {
+  .nav_boxs {
     display: inline-block;
     width: 100%;
-    margin-bottom: 3%;
+    min-width: $m_width; 
+    margin: 0 auto;
+    padding: 10px 0;
     @include clearfix();
     
-    .f_logo_left {
+    .nav_box {
       display: inline-block;
-      width: calc(75% - 5px);
+      width: calc(100% / 5);
       float: left;
-      @include clearfix();
 
-      img {        
-        max-width: 100%;
-        height: auto;
-        float: left;
-      }
-    }
-
-    .f_logo_right {
-      display: inline-block;
-      width: calc(25% - 5px);
-      float: left;
-      margin-left: 10px;
-      @include clearfix();
-
-      img {        
-        max-width: 100%;
-        height: auto;
-        float: right;
-      }
-    }
-  }
-
-  .f_down_boxs {
-    display: inline-block;
-    width: 100%;
-    text-align: left;
-
-    .f_type {
-      display: inline-block;
-      width: 100%;
-      padding-bottom: 2.5%;
-
-      p {
+      .icon_box, .icon_type {
         display: inline-block;
-        width: 90%;
-        padding: 0;
-        margin: 0;
-        color: black;
-        font-size: 1.05rem;
-
-        &.f_span {
-          text-indent: 2.2rem;
-
-          // ipad plus 以上
-          @include range-width(900px, 3000px) {
-            text-indent: 5.5rem;
-          }
-
-          // ipad 
-          @include range-width(765px, 900px) {
-            text-indent: 4.3rem;
-          }
-
-          // android中間值
-          @include range-width(415px, 765px) {
-            text-indent: 4.2rem;
-          }
-
-          // iphone6 plus 以上
-          @include range-width(380px, 415px) {
-            text-indent: 2.2rem;
-          }
-
-          // iphone6 以上
-          @include range-width(330px, 380px) {
-            text-indent: 2rem;
-          }
-        }
-
-        // ipad plus 以上
-        @include range-width(900px, 3000px) {
-          font-size: 3rem;
-        }
-
-        // ipad 
-        @include range-width(765px, 900px) {
-          font-size: 2.5rem;
-        }
-
-        // android中間值
-        @include range-width(415px, 765px) {
-          font-size: 1.05rem;
-        }
-
-        // iphone6 plus 以上
-        @include range-width(380px, 415px) {
-          font-size: 1.25rem;
-        }
-
-        // iphone6 以上
-        @include range-width(330px, 380px) {
-          font-size: 1.2rem;
-        }
+        width: 100%;
+        color: white
       }
 
-      a {
-        display: inline-block;
-        width: 90%;
-        padding: 0;
-        margin: 0;
-        color: black;
-        font-size: 1.05rem;
-        text-decoration: none;
-
-         &:hover {
-          color: $c_blue;
-        }
-
-        // ipad plus 以上
-        @include range-width(900px, 3000px) {
-          font-size: 3rem;
-        }
-
-        // ipad 
-        @include range-width(765px, 900px) {
-          font-size: 2.5rem;
-        }
-
-        // android中間值
-        @include range-width(415px, 765px) {
-          font-size: 1.05rem;
-        }
-
-        // iphone6 plus 以上
-        @include range-width(380px, 415px) {
-          font-size: 1.25rem;
-        }
-
-        // iphone6 以上
-        @include range-width(330px, 380px) {
-          font-size: 1.2rem;
-        }
-      }
-
-
-      i {
-        display: inline-block;
-        margin-right: 3%;
-        color: $c_blue;
-        font-size: 1.5rem;
-
-        // ipad plus 以上
-        @include range-width(900px, 3000px) {
-          font-size: 3.5rem;
-        }
-
-        // ipad 
-        @include range-width(765px, 900px) {
-          font-size: 3rem;
-        }
-
-        // android中間值
-        @include range-width(415px, 765px) {
-          font-size: 1.05rem;
-        }
-
-        // iphone6 plus 以上
-        @include range-width(380px, 415px) {
-          font-size: 1.25rem;
-        }
-
-        // iphone6 以上
-        @include range-width(330px, 380px) {
-          font-size: 1.2rem;
-        }
-      }
-    }
-
-    .copyright {
-      display: inline-block;
-      padding-left: 9%;
-      color: black;
-      font-size: 1rem;
-
-      // ipad plus 以上
-      @include range-width(900px, 3000px) {
-        font-size: 3rem;
-        padding-left: 7%;
-      }
-
-      // ipad 
-      @include range-width(765px, 900px) {
-        font-size: 2.5rem;
-        padding-left: 7%;
-      }
-
-      // android中間值
-      @include range-width(415px, 765px) {
-        font-size: 1.05rem;
-        padding-left: 7%;
-      }
-
-      // iphone6 plus 以上
-      @include range-width(380px, 415px) {
-        font-size: 1.25rem;
-        padding-left: 7%;
-      }
-
-      // iphone6 以上
-      @include range-width(330px, 380px) {
+      .icon_type {
         font-size: 1.2rem;
-        padding-left: 7%;
+        font-weight: 600;
+        margin-top: 5px;
       }
+
+      .icon_box {
+        height: 25px;
+      }
+
+
+      &:nth-child(1) {
+        .icon_box {
+           &:before {
+            display: inline-block;
+            content: '\e91b';
+            font-family: 'icomoon';
+            font-size: 2rem;
+          } 
+        } 
+      }
+
+      &:nth-child(2) {
+        .icon_box {
+           &:before {
+            display: inline-block;
+            content: '\e903';
+            font-family: 'icomoon';
+            font-size: 2.6rem;
+            margin-top: -2px;
+          } 
+        } 
+      }
+
+      &:nth-child(3) {
+        .icon_box {
+           &:before {
+            display: inline-block;
+            content: '\e91e';
+            font-family: 'icomoon';
+            font-size: 2.2rem;
+          } 
+        } 
+      }
+
+      &:nth-child(4) {
+        .icon_box {
+           &:before {
+            display: inline-block;
+            content: '\e906';
+            font-family: 'icomoon';
+            font-size: 2.6rem;
+            margin-top: -2px;
+          } 
+        } 
+      }
+
+      &:nth-child(5) {
+        .icon_box {
+           &:before {
+            display: inline-block;
+            content: '\e91a';
+            font-family: 'icomoon';
+            font-size: 2rem;
+            font-weight: bolder;
+          } 
+        } 
+      }
+
     }
-    
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
