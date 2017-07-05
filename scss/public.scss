@@ -373,6 +373,8 @@ header {
               top: 18px;
               width: 0%;
               left: 50%;
+              opacity: 0;
+              @include transition(background .3s);
             }
 
             &:nth-child(2) {
@@ -393,6 +395,8 @@ header {
               top: 18px;
               width: 0%;
               left: 50%;
+              opacity: 0;
+              @include transition(background .3s);
             }
           }
         }
@@ -400,7 +404,6 @@ header {
     }
   }
 }
-
 
 
 #milddle {
@@ -704,6 +707,41 @@ nav {
       }
 
     }
+  }
+}
+
+
+#menu_boxs {
+  position: fixed;
+  right: -200px;
+  top: 0;
+  z-index: 90;
+  margin-top: 115px;
+  height: calc(100% - 69px - 115px);
+  width: 200px;
+  background-color: red;
+  overflow: scroll;
+  @include transition(opacity .3s, right .3s);
+
+  &.s_menu {
+    right: 0;    
+  }  
+}
+
+#menu_back {
+  position: fixed;
+  left: -500px;
+  top: 0;
+  z-index: 89;
+  margin-top: 115px;
+  height: calc(100% - 69px - 115px);
+  width: 100%;
+  
+  @include transition(opacity .4s, left .3s);
+
+  &.s_menu_b {
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
   }
 }
 

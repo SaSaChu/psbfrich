@@ -7,19 +7,17 @@ $(function () {
   // 圖片縮放
   $(".banner_boxs").imgLiquid ();
 
-  // // 右邊menu
-  // $('.menu_boxs').click(function() {
-  //   $('#nav_box').toggleClass('sn');
-  //   $('#cover').toggleClass('show');
-  // });
 
-  // 漢堡變換
+  // 漢堡變換 + menu滑出
   $(document).ready(function() {
-
     $('#nav-icon3').click(function(){
       $(this).toggleClass('open');
-    });
 
+      $('#menu_boxs').toggleClass('s_menu');
+      $('#menu_back').toggleClass('s_menu_b');
+    });
   });
+
+
 
 });
