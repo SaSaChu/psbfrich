@@ -212,9 +212,193 @@ $c_blue: rgba(0, 154, 225, 1.00);
 header {
   display: inline-block;
   width: 100%;
+  height: 115px;
+  position:fixed;
+  top: 0;
+  left: 0;
 
-  height: 140px;
-  background-color: rgba(0, 0, 255, 0.2);
+  .top_boxs_1 {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    background-color: white;
+    @include clearfix();
+    
+    .top_box_l {
+      display: inline-block;
+      width: 115px;
+      float: left;
+      border-right: 1px solid $c_blue;
+      text-align: left;
+
+      .login {
+        display: inline-block;
+        width: 100%;
+        color: black;
+        font-weight: bolder;
+        font-size: 1.2rem;
+
+        &:before {
+          display: inline-block;
+          content: '\e90c';
+          font-family: 'icomoon';
+          color: rgba(233, 135, 78, 1.00);
+          margin-right: 5px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .top_box_r {
+      display: inline-block;
+      width: calc(100% - 115px);
+      float: right;
+      text-align: left;
+      padding-left: 10px;
+
+      div {
+        display: inline-block;
+        width: 70px;
+        height: 20px;
+        overflow: hidden;
+        color: rgba(187, 188, 189, 1.00);
+
+        &:before {
+          display: inline-block;
+          content: '\e90e';
+          font-family: 'icomoon';
+          float: right;
+          padding-top: 3px;
+          font-size: 1.2rem;
+        }
+        // background: url(../img/new_arrow.png) no-repeat right #ddd;
+
+        select {
+           background: transparent;
+           width: 55px;
+           height: 20px;
+           padding: 0 3px;
+           font-size: 1rem;
+           color: rgba(187, 188, 189, 1.00);
+           border: 0;
+           outline: 0;
+           -webkit-appearance: none; /*for chrome*/
+        }
+      }
+
+      span {
+        display: inline-block;
+        color: block;
+        font-size: 1rem;
+        margin-left: 5px;
+        font-weight: 600;
+      }
+
+      img {
+        display: inline-block;
+        width: 27px;
+        margin-left: 3px;
+      }
+    }
+  }
+
+  .top_boxs_2 {
+    display: inline-block;
+    width: 100%;
+    height: 75px;
+    padding: 12px;
+    background-color: $c_blue;
+    @include clearfix();
+    
+    .logo_boxs {
+      display: inline-block;
+      float: left;
+      width: 241px;
+    }
+
+    .menu_boxs {
+      display: inline-block;
+      float: right;
+      padding-top: 15px;
+
+      #nav-icon3 {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        // margin: 50px auto;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+
+        span {
+          display: block;
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          background: white;
+          opacity: 1;
+          left: 0;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transition: .25s ease-in-out;
+          -moz-transition: .25s ease-in-out;
+          -o-transition: .25s ease-in-out;
+          transition: .25s ease-in-out;
+
+          &:nth-child(1) {
+            top: 0px;
+          }
+
+          &:nth-child(2), &:nth-child(3) {
+            top: 10px;
+          }
+
+          &:nth-child(4) {
+            top: 20px;
+          }
+        }
+
+        &.open {
+          span {
+            &:nth-child(1) {
+              top: 18px;
+              width: 0%;
+              left: 50%;
+            }
+
+            &:nth-child(2) {
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+
+             &:nth-child(3) {
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+            }
+
+             &:nth-child(4) {
+              top: 18px;
+              width: 0%;
+              left: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -228,6 +412,7 @@ header {
     width: 100%;
     max-width: 100%;
     height: auto;
+    margin-top: 114px;
 
     img {
       display: inline-block !important;
@@ -242,7 +427,7 @@ header {
     max-width: $m_width;
     width: 100%;
     padding: 15px 25px;
-    margin-bottom: 70px;
+    // margin-bottom: 70px;
     @include clearfix();
 
     .cent_boxs {
@@ -304,6 +489,7 @@ header {
             font-family: 'icomoon';
             font-size: 5rem;
             color: white;
+            margin-top: -3px;
           }
         }
       }
@@ -317,7 +503,7 @@ header {
             width: 100%;
             content: '\e908';
             font-family: 'icomoon';
-            font-size: 5rem;
+            font-size: 4.5rem;
             color: white;
           }
         }
@@ -332,8 +518,9 @@ header {
             width: 100%;
             content: '\e909';
             font-family: 'icomoon';
-            font-size: 5rem;
+            font-size: 5.4rem;
             color: white;
+            margin-top: -6px;
           }
         }
       }
@@ -347,8 +534,9 @@ header {
             width: 100%;
             content: '\e903';
             font-family: 'icomoon';
-            font-size: 5rem;
+            font-size: 4.5rem;
             color: white;
+            margin-top: -3px;
           }
         }
       }
@@ -362,7 +550,7 @@ header {
             width: 100%;
             content: '\e905';
             font-family: 'icomoon';
-            font-size: 5rem;
+            font-size: 4.5rem;
             color: white;
           }
         }
@@ -377,7 +565,7 @@ header {
             width: 100%;
             content: '\e907';
             font-family: 'icomoon';
-            font-size: 5rem;
+            font-size: 4.8rem;
             color: white;
           }
         }
@@ -392,8 +580,9 @@ header {
             width: 100%;
             content: '\e90a';
             font-family: 'icomoon';
-            font-size: 5rem;
+            font-size: 5.2rem;
             color: white;
+            margin-top: -5px;
           }
         }
       }
@@ -407,7 +596,7 @@ header {
             width: 100%;
             content: '\e90b';
             font-family: 'icomoon';
-            font-size: 5rem;
+            font-size: 4.6rem;
             color: white;
           }
         }
@@ -519,6 +708,57 @@ nav {
 }
 
 
+footer {
+  display: inline-block;
+  width: 100%;
+  height: 210px;
+  padding: 12px;
+  background-color: rgba(254, 234, 240, 1.00);
+
+  .f_logo_boxs {
+    display: inline-block;
+    width: 100%;
+    @include clearfix();
+
+    .f_logo_l {
+      display: inline-block;
+      float: left;
+      width: 215px;
+      height: 45px;
+    }
+
+    .f_logo_r {
+      display: inline-block;
+      float: right;
+      width: 60px;
+      height: 35px;
+    }
+  }
+
+  .f_type_boxs {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+
+    .f_type, .copyright {
+      display: inline-block;
+      width: 100%;
+      color: black;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .f_type {
+      font-size: 1.2rem;
+    }
+
+    .copyright {
+      padding-top: 8px;
+      font-size: 1rem;
+    }
+  }
+}
 
 
 

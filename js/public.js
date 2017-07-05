@@ -13,5 +13,13 @@ $(function () {
   //   $('#cover').toggleClass('show');
   // });
 
+  // 漢堡變換
+  $(document).ready(function() {
+
+    $('#nav-icon3').click(function(){
+      $(this).toggleClass('open');
+    });
+
+  });
 
 });
