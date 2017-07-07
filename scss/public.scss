@@ -207,7 +207,7 @@ html {
 
 $m_width: 320px;
 $c_blue: rgba(0, 154, 225, 1.00);
-
+$c_o: rgba(233, 135, 78, 1.00);
 
 header {
   display: inline-block;
@@ -243,7 +243,7 @@ header {
           display: inline-block;
           content: '\e90c';
           font-family: 'icomoon';
-          color: rgba(233, 135, 78, 1.00);
+          color: $c_o;
           margin-right: 5px;
           font-size: 1.5rem;
         }
@@ -711,7 +711,7 @@ nav {
 }
 
 
-#menu_boxs {
+#r_menu_boxs {
   position: fixed;
   right: -200px;
   top: 0;
@@ -719,13 +719,201 @@ nav {
   margin-top: 115px;
   height: calc(100% - 69px - 115px);
   width: 200px;
-  background-color: red;
+  background-color: $c_blue;
   overflow: scroll;
   @include transition(opacity .3s, right .3s);
+  text-align: left;
 
   &.s_menu {
     right: 0;    
   }  
+
+  .m_in_boxs {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+
+    .m_in {
+      display: inline-block;
+      width: 100%;
+      height: 37px;
+      padding: 12px;
+      background-color: white;
+      border: 0;
+      outline: 0;
+      color: rgba(153, 154, 155, 1.00);
+      font-size: 1.2rem;
+    }
+
+    button {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 37px;
+      height: 37px;
+      background-color: rgba(101, 186, 236, 1.00);
+      border: 0;
+      outline: 0;
+
+      &:before {
+        display: inline-block;
+        content: '\e921';
+        font-family: 'icomoon';
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .m_other_boxs {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+
+    &.w_line {
+      padding-left: 30px !important;
+      border-top: 1px solid white;
+    }
+
+    button {
+      display: inline-block;
+      width: 108px;
+      height: 32px;
+      background-color: white;
+      @include border-radius(3px);
+      color: $c_o;
+      outline: 0;
+      border: 0;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      &:before {
+        display: inline-block;
+        content: '\e90c';
+        font-family: 'icomoon';
+        color: $c_o;
+        font-size: 1.2rem;
+        margin: 3px 5px 0 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      margin-left: 6px;
+      color: white;
+      font-size: 1.2rem;
+      line-height: 34px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    p {
+      display: inline-block;
+      width: 100%;
+      padding: 5px 0;
+      margin: 0;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      img {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+      }
+    }
+
+    .money_boxs {
+      display: inline-block;
+      width: 100%;
+
+      .money_box {
+        display: inline-block;
+        width: 130px;
+        height: 30px;
+        background-color: rgba(0, 123, 178, 1.00);
+        border-bottom: 1px solid white;
+        @include border-radius(3px);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        padding: 3px 10px;
+      }
+
+      .doller {
+        display: inline-block;
+        width: 10px;
+        color: white;
+        padding: 0;
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  > a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 12px 12px 30px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid white; 
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &.se_menu {
+      &:after {
+        display: inline-block;
+        content: '\e910';
+        font-family: 'icomoon';
+        margin-top: 2px;
+        margin-left: 3px;
+        @include rotate(0deg);
+        @include transition(transition .3s);
+      }
+
+      &.s_open {      
+        &:after {
+          @include rotate(90deg);
+        }
+      }        
+    }
+  }
+
+  .se_div_box {
+    display: none;
+    @include transition(all .3s);
+
+    &.show_div {
+      display: inline-block;
+      width: 100%;
+      padding: 10px 12px 10px 30px;
+      background-color: rgba(176, 223, 248, 1.00);
+
+      .s_m {
+        display: inline-block;
+        width: 100%;
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 12px 0;
+
+        &:hover {
+          color: rgba(0, 125, 179, 1.00);
+        }
+      }
+    }
+    
+  }
 }
 
 #menu_back {
